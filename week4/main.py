@@ -43,7 +43,7 @@ try:
                     Flammability = float(parts[4].strip())  # 인화성 (숫자로 변환)
                     log_list.append((Substance, Weight, Specific_Gravity, Strength, Flammability))
                 except ValueError:
-                    print(f"변환 오류: {parts} - 인화성 값이 숫자가 아님 (제외됨)")
+                    print(f"변환 오류: {parts} - 인화성 값이 실수가 아님")
 
         # 인화성 기준으로 정렬 (내림차순)
         log_list.sort(key=lambda x: x[4], reverse=True)
@@ -85,3 +85,5 @@ except PermissionError:
     print(f"Error: 파일을 열 권한이 없습니다. ({file_path})")
 except Exception as e:
     print(f"Error: {e}")
+
+    
