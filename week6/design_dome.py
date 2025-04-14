@@ -17,7 +17,7 @@ try:
     filtered_parts = parts[means < 50]
 
     # 필터링된 데이터를 CSV파일로 저장
-    file_path = 'parts_to_work_on.csv'
+    file_path = './week6/csv/parts_to_work_on.csv'
     with open(file_path, 'wt') as f:
         for row in filtered_parts:
             line = ','.join(row)
