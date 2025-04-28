@@ -42,5 +42,8 @@ class MissionComputer:
             # 5초에 한 번씩
             time.sleep(5)
 
-# 함수 호출
-MissionComputer.get_sensor_data()
+# RunComputer 인스턴스 생성
+RunComputer = MissionComputer()
+
+# get_sensor_data 메소드 호출
+RunComputer.get_sensor_data()
